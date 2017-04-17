@@ -54,7 +54,7 @@ click();
 move(74,212);//inicio seleção nome
 clickSegura();
 move(246,212);//final seleção nome
-clickSolta();	
+clickSolta();
 copiar();
 resgata();
 printf("Nome Cliente --> %s\n",info);
@@ -73,7 +73,7 @@ printf("Situação --> %s\n",info);
 move(57,285);
 clickSegura();
 move(253,285);
-clickSolta();	
+clickSolta();
 copiar();
 resgata();
 printf("Endereço --> %s\n",info);
@@ -94,7 +94,7 @@ dbclick();
 copiar();
 resgata();
 printf("UF --> %s\n",info);
-//UF	
+//UF
 
 
 //Bairro
@@ -118,7 +118,7 @@ click();
 move(530,300);//inicio seleção nome
 clickSegura();
 move(590,300);//final seleção nome
-clickSolta();	
+clickSolta();
 copiar();
 resgata();
 printf("CEP --> %s\n",info);
@@ -130,7 +130,7 @@ click();
 move(30,310);//inicio seleção nome
 clickSegura();
 move(108,310);//final seleção nome
-clickSolta();	
+clickSolta();
 copiar();
 resgata();
 printf("CPF --> %s\n",info);
@@ -142,7 +142,7 @@ click();
 move(276,310);//inicio seleção nome
 clickSegura();
 move(420,310);//final seleção nome
-clickSolta();	
+clickSolta();
 copiar();
 resgata();
 printf("RG --> %s\n",info);
@@ -163,7 +163,7 @@ click();
 move(80,333);//inicio seleção nome
 clickSegura();
 move(155,333);//final seleção nome
-clickSolta();	
+clickSolta();
 copiar();
 resgata();
 printf("Nascimento --> %s\n",info);
@@ -183,7 +183,7 @@ void move(int x, int y){//Move
 void click(){ //Click
     Sleep(200);
     mouse_event(MOUSEEVENTF_LEFTDOWN, 0,0, 0,0);
-    mouse_event(MOUSEEVENTF_LEFTUP, 0,0, 0,0); 
+    mouse_event(MOUSEEVENTF_LEFTUP, 0,0, 0,0);
 }
 
 void clickSegura(){ //Click
@@ -193,7 +193,7 @@ void clickSegura(){ //Click
 
 void clickSolta(){ //Click
     Sleep(200);
-     mouse_event(MOUSEEVENTF_LEFTUP, 0,0, 0,0); 
+     mouse_event(MOUSEEVENTF_LEFTUP, 0,0, 0,0);
 }
 
 void dbclick(){ //Double Click
@@ -221,23 +221,23 @@ void copiar(){
 
 	INPUT ip;
 	ip.type = INPUT_KEYBOARD;
-	
+
 	Sleep(50);
 	// Press the "Ctrl" key
 	ip.ki.wVk = VK_CONTROL;
 	ip.ki.dwFlags = 0; // 0 for key press
 	SendInput(1, &ip, sizeof(INPUT));
-	
+
 	// Press the "C" key
 	ip.ki.wVk = 'C';
 	ip.ki.dwFlags = 0; // 0 for key press
 	SendInput(1, &ip, sizeof(INPUT));
-	
+
 	// Release the "C" key
 	ip.ki.wVk = 'C';
 	ip.ki.dwFlags = KEYEVENTF_KEYUP;
 	SendInput(1, &ip, sizeof(INPUT));
-	
+
 	// Release the "Ctrl" key
 	ip.ki.wVk = VK_CONTROL;
 	ip.ki.dwFlags = KEYEVENTF_KEYUP;
@@ -254,18 +254,18 @@ void resgata(){
 
     Sleep(400);
 	HANDLE h;
-	
+
 	if (!OpenClipboard(NULL))
 	BailOut("Can't open clipboard");
-	
+
 	h = GetClipboardData(CF_TEXT);
 	info = (char *)h;
-	
+
 	CloseClipboard();
 
-	
+
 	//std::cout << numero << std::endl;
-         
+
 }
 
 
