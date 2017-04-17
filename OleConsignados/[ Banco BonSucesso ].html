@@ -1,0 +1,1320 @@
+
+<!-- saved from url=(0072)https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<link rel="stylesheet" type="text/css" href="./[ Banco BonSucesso ]_files/Style.css">
+<meta name="GENERATOR" content="IW5.1.28 Serial 722652289">
+<meta http-equiv="Expires" content="-1">
+<script language="Javascript" src="./[ Banco BonSucesso ]_files/IWCommon.js_5.1.28"></script>
+
+<script language="Javascript" src="./[ Banco BonSucesso ]_files/IWCL.js_5.1.28"></script>
+
+<script language="Javascript" src="./[ Banco BonSucesso ]_files/IWCSData.js_5.1.28"></script>
+
+<script language="Javascript" src="./[ Banco BonSucesso ]_files/IWGecko.js_5.1.28"></script>
+<script language="Javascript1.2">
+function FormDefaultSubmit()
+{return false;}
+function Validate() {return true;}
+var GURLBase="/PROPBSOEMP_DLL.Dll";
+var GAppID="D0F95B16BE7D6B7CB2EAE440";
+
+var vTecla = false;
+function PegaTecla()
+{
+	  if (window.event && window.event.keyCode)
+     if (window.event.keyCode==116)
+         vTecla = true;
+}
+function Fim()
+{
+  if (vTecla==false)
+     {
+        var vRet = FMENUPFL1LSAIR_onclick();
+        if (vRet==false)
+            alert("Sessão finalizada!");
+     }
+  else
+        vTecla = false;
+}
+window.onbeforeunload = Fim;
+document.onkeydown = PegaTecla;
+var FMENUPFL1LUSUIWCL;
+var FMENUPFL1LVERSAOIWCL;
+var FMENUPFL1LSAIRIWCL;
+function FMENUPFL1LSAIR_onclick() {
+return SubmitClickConfirm('FMENUPFL1LSAIR','', false, '');
+}
+var BBFILTROIWCL;
+function BBFILTRO_onclick() {
+return SubmitClickConfirm('BBFILTRO','', true, '');
+}
+var BBLOCALIZARIWCL;
+function BBLOCALIZAR_onclick() {
+return SubmitClickConfirm('BBLOCALIZAR','', true, '');
+}
+var CHK1IWCL;
+var CHK2IWCL;
+var CHK3IWCL;
+var CHK4IWCL;
+var CHK5IWCL;
+var CHK6IWCL;
+var CHK7IWCL;
+var CHK8IWCL;
+var CHK9IWCL;
+var CHK10IWCL;
+var CHK11IWCL;
+var CHK12IWCL;
+var CHK13IWCL;
+var CHK14IWCL;
+var CHK15IWCL;
+var CHK16IWCL;
+var CHK17IWCL;
+var CHK18IWCL;
+var CHK19IWCL;
+var CHK20IWCL;
+var CHK21IWCL;
+var CHK22IWCL;
+var CHK23IWCL;
+var CHK24IWCL;
+var CHK25IWCL;
+var CHK26IWCL;
+var CHK27IWCL;
+var CHK28IWCL;
+var CHK29IWCL;
+var CHK30IWCL;
+var CHK31IWCL;
+function rollon(row,where){ 
+var tablecolor;
+if (where == 'over'){
+ currentcolor=document.getElementById(row).style.getAttribute("backgroundColor")
+ document.getElementById(row).style.backgroundColor='' 
+ }else{ 
+ document.getElementById(row).style.setAttribute("backgroundColor",currentcolor) }
+}
+var DBGPROPIWCL;
+var BBATUALIZAIWCL;
+function BBATUALIZA_onclick() {
+return SubmitClickConfirm('BBATUALIZA','', true, '');
+}
+var BBVOLTARIWCL;
+function BBVOLTAR_onclick() {
+return SubmitClickConfirm('BBVOLTAR','', false, '');
+}
+
+function InitIWCLObjects() {
+FMENUPFL1LUSUIWCL = CreateIWCLObject(IWCLForm, "FMENUPFL1LUSU", "FMENUPFL1LUSUIWCL");
+FMENUPFL1LVERSAOIWCL = CreateIWCLObject(IWCLForm, "FMENUPFL1LVERSAO", "FMENUPFL1LVERSAOIWCL");
+FMENUPFL1LSAIRIWCL = CreateIWCLObject(IWCLForm, "FMENUPFL1LSAIR", "FMENUPFL1LSAIRIWCL");
+FMENUPFL1LSAIRIWCL.HookEvent("click",FMENUPFL1LSAIR_onclick);
+BBFILTROIWCL = CreateIWCLObject(IWCLForm, "BBFILTRO", "BBFILTROIWCL");
+BBFILTROIWCL.HookEvent("click",BBFILTRO_onclick);
+BBLOCALIZARIWCL = CreateIWCLObject(IWCLForm, "BBLOCALIZAR", "BBLOCALIZARIWCL");
+BBLOCALIZARIWCL.HookEvent("click",BBLOCALIZAR_onclick);
+CHK1IWCL = CreateIWCLObject(IWCLForm, "CHK1", "CHK1IWCL");
+CHK2IWCL = CreateIWCLObject(IWCLForm, "CHK2", "CHK2IWCL");
+CHK3IWCL = CreateIWCLObject(IWCLForm, "CHK3", "CHK3IWCL");
+CHK4IWCL = CreateIWCLObject(IWCLForm, "CHK4", "CHK4IWCL");
+CHK5IWCL = CreateIWCLObject(IWCLForm, "CHK5", "CHK5IWCL");
+CHK6IWCL = CreateIWCLObject(IWCLForm, "CHK6", "CHK6IWCL");
+CHK7IWCL = CreateIWCLObject(IWCLForm, "CHK7", "CHK7IWCL");
+CHK8IWCL = CreateIWCLObject(IWCLForm, "CHK8", "CHK8IWCL");
+CHK9IWCL = CreateIWCLObject(IWCLForm, "CHK9", "CHK9IWCL");
+CHK10IWCL = CreateIWCLObject(IWCLForm, "CHK10", "CHK10IWCL");
+CHK11IWCL = CreateIWCLObject(IWCLForm, "CHK11", "CHK11IWCL");
+CHK12IWCL = CreateIWCLObject(IWCLForm, "CHK12", "CHK12IWCL");
+CHK13IWCL = CreateIWCLObject(IWCLForm, "CHK13", "CHK13IWCL");
+CHK14IWCL = CreateIWCLObject(IWCLForm, "CHK14", "CHK14IWCL");
+CHK15IWCL = CreateIWCLObject(IWCLForm, "CHK15", "CHK15IWCL");
+CHK16IWCL = CreateIWCLObject(IWCLForm, "CHK16", "CHK16IWCL");
+CHK17IWCL = CreateIWCLObject(IWCLForm, "CHK17", "CHK17IWCL");
+CHK18IWCL = CreateIWCLObject(IWCLForm, "CHK18", "CHK18IWCL");
+CHK19IWCL = CreateIWCLObject(IWCLForm, "CHK19", "CHK19IWCL");
+CHK20IWCL = CreateIWCLObject(IWCLForm, "CHK20", "CHK20IWCL");
+CHK21IWCL = CreateIWCLObject(IWCLForm, "CHK21", "CHK21IWCL");
+CHK22IWCL = CreateIWCLObject(IWCLForm, "CHK22", "CHK22IWCL");
+CHK23IWCL = CreateIWCLObject(IWCLForm, "CHK23", "CHK23IWCL");
+CHK24IWCL = CreateIWCLObject(IWCLForm, "CHK24", "CHK24IWCL");
+CHK25IWCL = CreateIWCLObject(IWCLForm, "CHK25", "CHK25IWCL");
+CHK26IWCL = CreateIWCLObject(IWCLForm, "CHK26", "CHK26IWCL");
+CHK27IWCL = CreateIWCLObject(IWCLForm, "CHK27", "CHK27IWCL");
+CHK28IWCL = CreateIWCLObject(IWCLForm, "CHK28", "CHK28IWCL");
+CHK29IWCL = CreateIWCLObject(IWCLForm, "CHK29", "CHK29IWCL");
+CHK30IWCL = CreateIWCLObject(IWCLForm, "CHK30", "CHK30IWCL");
+CHK31IWCL = CreateIWCLObject(IWCLForm, "CHK31", "CHK31IWCL");
+DBGPROPIWCL = CreateIWCLObject(IWCLForm, "DBGPROP", "DBGPROPIWCL");
+BBATUALIZAIWCL = CreateIWCLObject(IWCLForm, "BBATUALIZA", "BBATUALIZAIWCL");
+BBATUALIZAIWCL.HookEvent("click",BBATUALIZA_onclick);
+BBVOLTARIWCL = CreateIWCLObject(IWCLForm, "BBVOLTAR", "BBVOLTARIWCL");
+BBVOLTARIWCL.HookEvent("click",BBVOLTAR_onclick);
+
+}
+function Initialize() {
+InitSubmitter();
+StaticInit();
+if (document.body.leftMargin < 0 && document.body.topMargin < 0) {
+  document.body.leftMargin = 0;
+  document.body.topMargin = 0;
+}
+InitRects(942, 696);
+InitIWCLObjects();
+
+
+}
+</script>
+
+
+<title>[ Banco BonSucesso ]</title>
+<link href="./[ Banco BonSucesso ]_files/estilo.css" rel="stylesheet" type="text/css">
+<link href="./[ Banco BonSucesso ]_files/Style(1).css" rel="stylesheet" type="text/css">
+</head>
+<body topmargin="0" leftmargin="0" onload="Initialize()" onunload="ReleaseIWCL()" onblur="GSubmitting = false;" marginwidth="0" marginheight="0">
+<form onsubmit="return FormDefaultSubmit();" name="SubmitForm" action="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll" method="POST">
+  <input type="HIDDEN" name="IW_Action" value="DBGPROP">
+  <input type="HIDDEN" name="IW_ActionParam" value="1_854438395">
+  <input type="HIDDEN" name="IW_FormName" value="fPwCnProp">
+  <input type="HIDDEN" name="IW_FormClass" value="TfPwCnProp">
+  <input type="HIDDEN" name="IW_SessionID_" value="D0F95B16BE7D6B7CB2EAE44020170412135152241">
+  <input type="HIDDEN" name="IW_TrackID_" value="4">
+<table width="100%" height="100" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr> 
+    <td width="156" rowspan="5" valign="top"><img src="./[ Banco BonSucesso ]_files/TarjaTitulo_Logo.gif" width="156" height="100"></td>
+    <td width="532" rowspan="2" valign="top"><img src="./[ Banco BonSucesso ]_files/TarjaTitulo_TopoEsq.gif" width="532" height="62"></td>
+    <td height="5"></td>
+    <td width="90" rowspan="2" valign="top"><img src="./[ Banco BonSucesso ]_files/TarjaTitulo_TopoDir.gif" width="90" height="62"></td>
+  </tr>
+  <tr> 
+    <td width="100%" bgcolor="#ffffff">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="1" bgcolor="#FFFFFF"></td>
+  </tr>
+  <tr> 
+    <td height="20" colspan="3" bgcolor="#004f91"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr> 
+          <td width="200" class="textobranco"><b>&nbsp;</b>Usuário: <span class="textobranco" style="z-index:100;font-style:normal;font-size:10px;font-family:&#39;verdana&#39;;text-decoration:none;color:#FFFFFF;" id="FMENUPFL1LUSU">CAPITALSCM</span></td>
+          <td class="textobranco">Versão:<b> </b> <span class="textobranco" style="z-index:100;font-style:normal;font-size:10px;font-family:&#39;verdana&#39;;text-decoration:none;color:#FFFFFF;" id="FMENUPFL1LVERSAO">14061923</span>&nbsp;&nbsp; 
+            [  <a href="javascript:void(0)" onclick="FMENUPFL1LSAIRIWCL; return false" class="textobranco" style="z-index:100;font-style:normal;font-size:10px;font-family:&#39;verdana&#39;;text-decoration:none;color:#FFFFFF;" id="FMENUPFL1LSAIR">Sair</a>] </td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+  <tr> 
+    <td colspan="3">&nbsp;</td>
+  </tr>
+</tbody></table>
+<table width="780" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr> 
+    <td>&nbsp;</td>
+  </tr>
+</tbody></table>
+<table width="780" align="center" border="0" cellpadding="1" cellspacing="0" class="fundopadrao">
+  <tbody><tr> 
+    <td width="1488" height="20" colspan="11" class="tarjatitulo">Consulta Proposta 
+      Esteira </td>
+  </tr>
+</tbody></table>
+<table width="780" border="0" align="center" cellpadding="00" cellspacing="0" class="fundopadrao">
+  <tbody><tr> 
+    <td width="5" height="40">&nbsp;</td>
+    <td width="385" class="texto"><input value="Filtro" name="BBFILTRO" type="button" class="bodytext" style="z-index:101;width:75;height:25;" id="BBFILTRO"></td>
+    <td width="385" align="right" class="texto"><input value="Localizar" name="BBLOCALIZAR" type="button" class="BBLOCALIZARCSS" style="z-index:100;width:75;height:25;" id="BBLOCALIZAR"></td>
+    <td width="5" valign="top" class="texto">&nbsp;</td>
+  </tr>
+</tbody></table>
+<table width="780" align="center" border="0" cellpadding="00" cellspacing="0">
+  <tbody><tr bgcolor="#E0E0E0" class="celuladestaque"> 
+    <td width="5">&nbsp;</td>
+    <td width="68" align="left" class="texto"> Proposta</td>
+    <td width="148" align="left" class="texto">Nome</td>
+    <td width="73" align="left" class="texto">Data Base</td>
+    <td width="102" align="left" class="texto">Data e Hora Atv.</td>
+    <td width="80" align="left" class="texto">Produto</td>
+    <td width="42" align="left" class="texto">Sit.</td>
+    <td align="left" class="texto">R</td>
+    <td align="left" class="texto">&nbsp;</td>
+    <td width="15" align="left" class="texto">&nbsp;</td>
+  </tr>
+</tbody></table>
+<table width="780" height="200" border="0" align="center" cellpadding="0" cellspacing="0" class="fundopadrao">
+  <tbody><tr> 
+    <td height="10" valign="top"> <div id="Layer1" style="position:relative; left:0%; top:1%; width:779px; height:210px; z-index:1; overflow: auto; visibility: visible;" class="texto"> 
+        <div align="left"><table id="DBGPROP" border="0" cellpadding="0" cellspacing="0" class="texto" style="z-index:101;">
+  <tbody><tr id="3801329281">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK1" name="CHK1_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK1" id="CHK1_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854438395&#39;, true, &#39;&#39;)">854438395</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;TRANQUILO RUFINO PINHEIRO&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:21&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854438395&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="3801329282">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK2" name="CHK2_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK2" id="CHK2_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854437517&#39;, true, &#39;&#39;)">854437517</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;Clarice Costa dos Santos Oliveira&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:19&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854437517&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="3801329283">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK3" name="CHK3_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK3" id="CHK3_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854437256&#39;, true, &#39;&#39;)">854437256</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;MARCIO SOUZA&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:19&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854437256&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="3801329284">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK4" name="CHK4_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK4" id="CHK4_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854434829&#39;, true, &#39;&#39;)">854434829</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;cladir terezinha gessinger&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:14&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854434829&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="3801329285">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK5" name="CHK5_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK5" id="CHK5_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854434743&#39;, true, &#39;&#39;)">854434743</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;VANDENIR CARRASCO&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:13&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854434743&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="3801329286">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK6" name="CHK6_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK6" id="CHK6_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854434652&#39;, true, &#39;&#39;)">854434652</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;ANANIAS SIQUEIRA DE SOUZA&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:12&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854434652&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="3801329287">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK7" name="CHK7_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK7" id="CHK7_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854434510&#39;, true, &#39;&#39;)">854434510</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;SANTOS DEFENDE ANTUNES&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:10&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854434510&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="3801329288">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK8" name="CHK8_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK8" id="CHK8_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854434475&#39;, true, &#39;&#39;)">854434475</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;JOAO MARIA DA SILVA CARVALHO&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:09&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854434475&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="3801329289">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK9" name="CHK9_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK9" id="CHK9_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854434429&#39;, true, &#39;&#39;)">854434429</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;SANTOS DEFENDE ANTUNES&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:08&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854434429&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292810">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK10" name="CHK10_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK10" id="CHK10_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854434390&#39;, true, &#39;&#39;)">854434390</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;JOSE ARAUJO DE MELLO&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:08&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854434390&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292811">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK11" name="CHK11_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK11" id="CHK11_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854434359&#39;, true, &#39;&#39;)">854434359</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CARMIRACI FELIPE DOS SANTOS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:07&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854434359&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292812">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK12" name="CHK12_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK12" id="CHK12_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854434135&#39;, true, &#39;&#39;)">854434135</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;JOSE MARIO DA SILVA BARROS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:04&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854434135&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292813">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK13" name="CHK13_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK13" id="CHK13_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854434031&#39;, true, &#39;&#39;)">854434031</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;ANTONIA SANTOS DE MACEDO&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:03&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854434031&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292814">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK14" name="CHK14_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK14" id="CHK14_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854433713&#39;, true, &#39;&#39;)">854433713</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;ADIR MARIA BUENO PERINOTTI&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12:58&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854433713&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292815">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK15" name="CHK15_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK15" id="CHK15_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854433679&#39;, true, &#39;&#39;)">854433679</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;FILOMENA PROCIA OTELAC&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12:57&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854433679&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292816">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK16" name="CHK16_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK16" id="CHK16_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854433653&#39;, true, &#39;&#39;)">854433653</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;NORMA ALEXANDRINA ROCHA&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12:57&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854433653&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292817">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK17" name="CHK17_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK17" id="CHK17_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854433577&#39;, true, &#39;&#39;)">854433577</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;MARIA MARTINEZ HEINST&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12:55&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854433577&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292818">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK18" name="CHK18_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK18" id="CHK18_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854433544&#39;, true, &#39;&#39;)">854433544</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;CIDINEI RIBEIRO DE SOUZA&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12:55&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854433544&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292819">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK19" name="CHK19_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK19" id="CHK19_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854433243&#39;, true, &#39;&#39;)">854433243</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;GILMAR CHIMINELLO&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12:50&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854433243&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292820">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK20" name="CHK20_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK20" id="CHK20_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854433187&#39;, true, &#39;&#39;)">854433187</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;IRONDINA MENDES TABORDA&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12:49&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854433187&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292821">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK21" name="CHK21_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK21" id="CHK21_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854434302&#39;, true, &#39;&#39;)">854434302</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;FATIMA NOEMI DA CRUZ DA ROSA&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;05:11&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854434302&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292822">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK22" name="CHK22_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK22" id="CHK22_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854430387&#39;, true, &#39;&#39;)">854430387</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;MARIA APARECIDA LOPES DA COSTA&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;19:49&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;INSS - NORMAL&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854430387&#39;, true, &#39;&#39;)">LIB</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292823">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK23" name="CHK23_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK23" id="CHK23_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854431157&#39;, true, &#39;&#39;)">854431157</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;DOBLEDAY CARLOS BATISTA FRANCOTTI&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;16:54&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;INSS - NORMAL&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854431157&#39;, true, &#39;&#39;)">LIB</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292824">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK24" name="CHK24_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK24" id="CHK24_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854431093&#39;, true, &#39;&#39;)">854431093</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;JANE CONCEICAO MENEZES DA SILVA&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;16:52&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854431093&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292825">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK25" name="CHK25_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK25" id="CHK25_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854430940&#39;, true, &#39;&#39;)">854430940</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;MARIA HELENA DOS SANTOS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;16:46&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854430940&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292826">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK26" name="CHK26_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK26" id="CHK26_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854430852&#39;, true, &#39;&#39;)">854430852</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;NIUZA SEMINO&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;16:43&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854430852&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292827">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK27" name="CHK27_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK27" id="CHK27_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854430701&#39;, true, &#39;&#39;)">854430701</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;MARCOS DE SOUZA STOLK&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;16:37&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854430701&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292828">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK28" name="CHK28_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK28" id="CHK28_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854425762&#39;, true, &#39;&#39;)">854425762</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;JOSE FERNANDO DE ALMEIDA FLORES&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;13:20&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;INSS - NORMAL&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854425762&#39;, true, &#39;&#39;)">LIB</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292829">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK29" name="CHK29_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK29" id="CHK29_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854425253&#39;, true, &#39;&#39;)">854425253</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;Marlise Terezinha Ferreira&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;12:02&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854425253&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292830">
+    <td valign="middle" align="left" nowrap="">&nbsp;&nbsp;
+      <span id="CHK30" name="CHK30_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK30" id="CHK30_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854424715&#39;, true, &#39;&#39;)">854424715</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150">
+      <font face="verdana" style="font-size:9px;">&nbsp;JACIR DA SILVEIRA&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40">
+      <font face="verdana" style="font-size:9px;">&nbsp;11:38&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN INSS&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854424715&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+  <tr id="38013292831">
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">&nbsp;&nbsp;
+      <span id="CHK31" name="CHK31_CHECKBOX" style="z-index:100;">
+        <input type="CHECKBOX" name="CHK31" id="CHK31_CHECKBOX">
+      </span>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="70" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;1_854422887&#39;, true, &#39;&#39;)">854422887</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="150" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;MARIA MADALENA DE AZEVEDO&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;11/04&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="40" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;10:15&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="100" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;CAPITAL CONSULTORIA SC&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" width="130" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;REFIN FEDERAL&nbsp;</font>
+    </td>
+    <td valign="middle" align="center" nowrap="" width="30" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;<a href="https://digitacaoproposta.bonsucessoconsignado.com.br/PROPBSOEMP_DLL.Dll#" onclick="return SubmitClickConfirm(&#39;DBGPROP&#39;,&#39;10_854422887&#39;, true, &#39;&#39;)">APR</a>&nbsp;</font>
+    </td>
+    <td valign="middle" align="left" nowrap="" bgcolor="#F9F9F9">
+      <font face="verdana" style="font-size:9px;">&nbsp;&nbsp;</font>
+    </td>
+  </tr>
+</tbody></table></div>
+      </div></td>
+  </tr>
+</tbody></table>
+<table width="780" border="0" align="center" cellpadding="0" cellspacing="0" class="fundopadrao">
+  <tbody><tr class="texto"> 
+    <td height="15" colspan="3">&nbsp;</td>
+  </tr>
+  <tr class="texto"> 
+    <td height="15" colspan="3">(<strong><font color="#FF0000">!</font></strong>) 
+      Erro ao executar atividade. Consultar observação.</td>
+  </tr>
+  <tr class="texto"> 
+    <td height="15" colspan="3">&nbsp;</td>
+  </tr>
+  <tr class="texto"> 
+    <td height="45"> <div align="right"> <input value="Atualizar" name="BBATUALIZA" type="button" class="bodytext" style="z-index:101;width:75;height:25;" id="BBATUALIZA"></div></td>
+    <td width="15"> </td>
+    <td width="382"> <input value="Voltar" name="BBVOLTAR" type="button" class="bodytext" style="z-index:100;width:75;height:25;" id="BBVOLTAR"></td>
+  </tr>
+</tbody></table>
+</form>
+
+
+</body></html>

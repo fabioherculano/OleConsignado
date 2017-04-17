@@ -1,0 +1,494 @@
+/*
+onAbort
+onBlur
+onChange
+onClick
+onDblClick
+onDragDrop
+onError
+onFocus
+onKeyDown
+onKeyPress
+onKeyUp
+onLoad
+onMouseDown
+onMouseMove
+onMouseOut
+onMouseOver
+onMouseUp
+onMove
+onReset
+onResize
+onSelect
+onSubmit
+onUnload
+*/
+var IWCLForm;
+var alNone = 0;
+var alTop = 1;
+var alBottom = 2;
+var alLeft = 3;
+var alRight = 4;
+var alClient = 5;
+var alCustom = 6;
+var iwclBase = 0;
+var iwclDBBase = 1000;
+var iwclLabel = 1 + iwclBase;
+var iwclEdit = 2 + iwclBase;
+var iwclComboBox = 3 + iwclBase;
+var iwclCheckBox = 4 + iwclBase;
+var iwclListBox = 5 + iwclBase;
+var iwclMemo = 6 + iwclBase;
+var iwclTreeView = 7 + iwclBase;
+var iwclDBNav = iwclDBBase + 1;
+var iwclDBGrid = iwclDBBase + 2;
+function Rect(ALeft, ATop, AWidth, AHeight) {
+this.Left = ALeft;
+this.Top = ATop;
+this.Width = AWidth;
+this.Height = AHeight;
+}
+function RectSize(AWidth, AHeight) {
+this.Width = AWidth;
+this.Height = AHeight;
+}
+function Point(AX, AY)
+{
+this.X = AX;
+this.Y = AY;
+}
+function CopyRect(ASrcRect) {
+return new Rect(ASrcRect.Left, ASrcRect.Top, ASrcRect.Width, ASrcRect.Height);
+}
+function CreateAnchors(ALeft, ARight, ATop, ABottom) {
+this.Left = ALeft;
+this.Right = ARight;
+this.Top = ATop;
+this.Bottom = ABottom;
+}
+function IWCL_FormRelease() {
+delete this.Rect;
+delete this.OriginalRect;
+var i;
+for (i = 0; i < this.OwnedComps.length; i++) {
+this.OwnedComps[i].IWRelease();
+this.OwnedComps[i] = null;
+}
+}
+function CreateIWCLForm(AWidth, AHeight) {
+/* this.Width = AWidth;
+this.Height = AHeight;
+this.OldWidth = AWidth;
+this.OldHeight = AHeight; */
+this.Item = document.body;
+this.Rect = new Rect(0, 0, AWidth, AHeight);
+this.OriginalRect = new Rect(0, 0, AWidth, AHeight);
+this.OwnedComps = new Array();
+this.UpdateRects = IWCL_UpdateRects;
+this.HookEvent = IWCL_HookEvent;
+this.IWRelease = IWCL_FormRelease;
+}
+function ReleaseIWCL() {
+IWCLForm.IWRelease();
+IWCLForm = null;
+}
+function LocateElement(AId) {
+var AItem = ns6 ? document.getElementById(AId): document.all[AId];
+var i;
+var LResult;
+if (AItem == null) {
+AItem = FindElem(AId);
+}
+else {
+if (!AItem.tagName) {
+for (i = 0; i < AItem.length; i++) {
+LResult = AItem[i];
+if (LResult.id == AId) break;
+}
+AItem = LResult;
+}
+}
+return AItem;
+}
+function ClientToScreen(AControl, APoint) {
+var LItem = AControl;
+var LPoint = new Point(APoint.X, APoint.Y);
+while (LItem != IWCLForm) {
+LItem = LItem.Owner;
+LPoint.X += LItem.Rect.Left;
+LPoint.Y += LItem.Rect.Top;
+}
+return LPoint;
+}
+function ScreenToClient(AControl, ARect) {
+var LPoint;
+if (AControl != IWCLForm) {
+LPoint = ClientToScreen(AControl.Owner, new Point(AControl.Owner.Rect.Left, AControl.Owner.Rect.Top));
+ARect.Left = ARect.Left - LPoint.X;
+ARect.Top = ARect.Top - LPoint.Y;
+}
+}
+function CreateRect(AControl) {
+var LRect;
+LRect = new Rect(AControl.offsetLeft, AControl.offsetTop,
+AControl.offsetWidth, AControl.offsetHeight);
+ScreenToClient(AControl, LRect);
+return LRect;
+}
+function IWCL_SetAlign(AAlign) {
+this.Align = AAlign;
+}
+function IWCL_SetAnchors(AAnchors) {
+this.Anchors = AAnchors;
+}
+function IWCL_SetFieldName(AFieldName) {
+this.FieldName = AFieldName;
+}
+function IWCL_SetDataSet(ADataSet) {
+if (ADataSet == null) {
+}
+this.DataSet = ADataSet;
+if (ADataSet != null) {
+ADataSet.OnChangeList[ADataSet.OnChangeList.length] = this;
+}
+this.DoOnChange(ADataSet);
+}
+function IWCL_OverrideIWCLType(ASetIWCLTypeMethod) {
+this.SetIWCLTypeMehtodList[this.SetIWCLTypeMehtodList.length] = ASetIWCLTypeMethod
+}
+function IWCL_SetOnChange(ADataSet) {
+this.SetOnChnage = ADataSet;
+}
+function IWCL_SetIWCLType(AType) {
+switch (AType) {
+case iwclLabel:
+this.DoOnChange = IWCL_LabelOnChange;
+break;
+case iwclEdit:
+break;
+case iwclComboBox:
+break;
+case iwclCheckBox:
+break;
+case iwclListBox:
+break;
+case iwclMemo:
+break;
+case iwclTreeView:
+break;
+case iwclDBNav:
+this.DoOnChange = IWCL_DBNavigatorOnChange;
+break;
+case iwclDBGrid:
+break;
+default: {
+for(i = 0; i < this.SetIWCLTypeMehtodList.length; i++)
+this.SetIWCLTypeMehtodList[i](AType);
+}
+}
+}
+function IWCL_OnChange(ADataSet) {
+}
+function IWCL_LabelOnChange(ADataSet) {
+if (ADataSet) {
+layerWrite(this.id, false, ADataSet.FieldByName(this.FieldName));
+}
+}
+function IWCL_DBNavigatorOnChange(ADataSet) {
+AElement = LocateElement(this.id + 'IWCL_First');
+if (AElement != null) {
+if (ADataSet != null) {
+if (ADataSet.BOF()) {
+AElement.src = this.First_Disabled;
+}
+else {
+AElement.src = this.First_Enabled;
+}
+} else {
+AElement.src = this.First_Disabled;
+}
+}
+AElement = LocateElement(this.id + 'IWCL_Last');
+if (AElement != null) {
+if (ADataSet != null) {
+if (ADataSet.EOF()) {
+AElement.src = this.Last_Disabled;
+}
+else {
+AElement.src = this.Last_Enabled;
+}
+} else {
+AElement.src = this.Last_Disabled;
+}
+}
+AElement = LocateElement(this.id + 'IWCL_Next');
+if (AElement != null) {
+if (ADataSet != null) {
+if (ADataSet.EOF()) {
+AElement.src = this.Next_Disabled;
+}
+else {
+AElement.src = this.Next_Enabled;
+}
+} else {
+AElement.src = this.Next_Disabled;
+}
+}
+AElement = LocateElement(this.id + 'IWCL_Prior');
+if (AElement != null) {
+if (ADataSet != null) {
+if (ADataSet.BOF()) {
+AElement.src = this.Prior_Disabled;
+}
+else {
+AElement.src = this.Prior_Enabled;
+}
+} else {
+AElement.src = this.Prior_Disabled;
+}
+}
+AElement = LocateElement(this.id + 'IWCL_Refresh');
+if (AElement != null) {
+if (ADataSet != null) {
+AElement.src = this.Refresh_Enabled;
+} else {
+AElement.src = this.Refresh_Disabled;
+}
+}
+}
+function IWCL_SetRect(ARect) {
+var LPoint = new Point(ARect.Left, ARect.Top);
+LPoint = ClientToScreen(this, LPoint);
+this.style.left = LPoint.X;
+this.style.top = LPoint.Y;
+if (ARect.Width != this.Rect.Width || ARect.Height != this.Rect.Height) {
+this.style.width = ARect.Width;
+this.style.height = ARect.Height;
+}
+}
+function IWCL_Release() {
+var i;
+this.Anchors = null;
+this.OriginalRect = null;
+this.Rect = null;
+this.SetAlign = null;
+this.SetAnchors = null;
+this.SetDataSet = null;
+this.SetFieldName = null;
+this.SetOnChange = null;
+this.DoOnChange = null;
+this.SetIWCLType = null;
+this.SetRect = null;
+this.OverrideIWCLType = null;
+this.UpdateRects = null;
+this.UpdateTopLeft = null;
+this.HookEvent = null;
+this.IWRelease = null;
+for (i = 0; i < this.SetIWCLTypeMehtodList.length; i++) {
+this.SetIWCLTypeMehtodList[i] = null;
+}
+this.SetIWCLTypeMehtodList = null;
+for (i = 0; i < this.OwnedComps.length; i++) {
+this.OwnedComps[i].IWRelease();
+this.OwnedComps[i] = null;
+}
+this.OwnedComps = null;
+for (i = 0; i < this.IEEventHandlers.length; i++) {
+this.IEEventHandlers[i] = null;
+}
+this.IEEventHandlers = null;
+this.Owner = null;
+}
+function CreateIWCLObject(AOwner, AId, AName) {
+var Item = LocateElement(AId);
+if(Item != null) {
+Item.Owner = AOwner;
+Item.Align = alNone;
+Item.Anchors = new CreateAnchors(true, false, true, false);
+Item.OriginalRect = CreateRect(Item);
+Item.Rect = CreateRect(Item);
+Item.SetAlign = IWCL_SetAlign;
+Item.SetAnchors = IWCL_SetAnchors;
+Item.SetDataSet = IWCL_SetDataSet;
+Item.SetFieldName = IWCL_SetFieldName;
+Item.SetOnChange = IWCL_SetOnChange;
+Item.DoOnChange = IWCL_OnChange;
+Item.SetIWCLType = IWCL_SetIWCLType;
+Item.SetIWCLTypeMehtodList = new Array();
+Item.SetRect = IWCL_SetRect;
+Item.OverrideIWCLType = IWCL_OverrideIWCLType;
+Item.UpdateRects = IWCL_UpdateRects;
+Item.UpdateTopLeft = IWCL_UpdateTopLeft;
+Item.HookEvent = IWCL_HookEvent;
+Item.IWRelease = IWCL_Release;
+Item.OwnedComps = new Array();
+Item.Owner.OwnedComps[Item.Owner.OwnedComps.length] = Item;
+Item.IEEventHandlers = new Array();
+}
+return Item;
+}
+function InitRects(AFormWidth, AFormHeight) {
+IWCLForm = new CreateIWCLForm(AFormWidth, AFormHeight);
+}
+function CustomAnchors(AAnchors, AAlign)
+{
+switch (AAlign) {
+case alTop: {
+return !(AAnchors.Left && AAnchors.Right && AAnchors.Top && !AAnchors.Bottom)
+break;
+}
+case alBottom: {
+return !(AAnchors.Left && AAnchors.Right && !AAnchors.Top && AAnchors.Bottom)
+break;
+}
+case alLeft: {
+return !(AAnchors.Left && !AAnchors.Right && AAnchors.Top && AAnchors.Bottom)
+break;
+}
+case alRight: {
+return !(!AAnchors.Left && AAnchors.Right && AAnchors.Top && AAnchors.Bottom)
+break;
+}
+case alNone: {
+return !(AAnchors.Left && !AAnchors.Right && AAnchors.Top && !AAnchors.Bottom)
+}
+}
+}
+function DoUpdateRects(AParent, AAlign, AControl) {
+var LNewRect;
+var LNewHeight;
+var LNewWidth;
+var LNewTop;
+var LNewLeft;
+LNewHeight = AControl.Rect.Height;
+LNewWidth = AControl.Rect.Width;
+LNewTop = AControl.Rect.Top;
+LNewLeft = AControl.Rect.Left;
+if (AAlign == alNone || CustomAnchors(AControl.Anchors, AAlign)) {
+with (AControl.Anchors) {
+if (Left && !Right) {
+} else if (Left && Right) {
+LNewWidth = AParent.Rect.Width - (AParent.OriginalRect.Width - AControl.OriginalRect.Width);
+} else if (!Left && Right) {
+LNewLeft = AControl.OriginalRect.Left + AParent.Rect.Width - AParent.OriginalRect.Width;
+} else if (!Left && !Right) {
+LNewLeft = AControl.OriginalRect.Left + (AParent.Rect.Width - AParent.OriginalRect.Width) / 2;
+/* ((AControl.OriginalRect.Left + AControl.OriginalRect.Width / 2) * AParent.Rect.Width) /
+AParent.OriginalRect.Width - LNewWidth / 2; */
+}
+if (Top && !Bottom) {
+} else if (Top && Bottom) {
+LNewHeight = AParent.Rect.Height - (AParent.OriginalRect.Height - AControl.OriginalRect.Height);
+} else if (!Top && Bottom) {
+LNewTop = AControl.OriginalRect.Top + AParent.Rect.Height - AParent.OriginalRect.Height;
+} else if (!Top && !Bottom) {
+LNewTop = AControl.OriginalRect.Top + (AParent.Rect.Height - AParent.OriginalRect.Height) / 2;
+/* ((AParent.OriginalRect.Top + AControl.OriginalRect.Height / 2) * AParent.Rect.Height) /
+AParent.OriginalRect.Height - LNewHeight / 2; */
+}
+}
+}
+LNewRect = new Rect(LNewLeft, LNewTop, LNewWidth, LNewHeight);
+switch (AControl.Align) {
+case alTop: {
+LNewRect.Height = LNewHeight;
+LNewRect.Top = AParent.ClientRect.Top;
+LNewRect.Width = AParent.ClientRect.Width;
+AParent.ClientRect.Top = AParent.ClientRect.Top + LNewHeight;
+AParent.ClientRect.Height = AParent.ClientRect.Height - LNewHeight;
+break;
+}
+case alBottom: {
+LNewRect.Height = LNewHeight;
+LNewRect.Top = (AParent.ClientRect.Height + AParent.ClientRect.Top) - LNewRect.Height;
+LNewRect.Width = AParent.ClientRect.Width;
+AParent.ClientRect.Height = AParent.ClientRect.Height - LNewHeight;
+break;
+}
+case alLeft: {
+LNewRect.Width = LNewWidth;
+LNewRect.Left = AParent.ClientRect.Left;
+LNewRect.Height = AParent.ClientRect.Height; // + AParent.OriginalRect.Top;
+AParent.ClientRect.Left = AParent.ClientRect.Left + LNewWidth;
+AParent.ClientRect.Width = AParent.ClientRect.Width - LNewWidth;
+break;
+}
+case alRight: {
+LNewRect.Width = LNewWidth;
+LNewRect.Left = (AParent.ClientRect.Left + AParent.ClientRect.Width) - LNewRect.Width;
+LNewRect.Height = AParent.ClientRect.Height; // + AParent.OriginalRect.Top;
+AParent.ClientRect.Width = AParent.ClientRect.Width - LNewWidth;
+break;
+}
+case alClient: {
+LNewRect.Top = AParent.ClientRect.Top;
+LNewRect.Left = AParent.ClientRect.Left;
+LNewRect.Width = AParent.ClientRect.Width;
+LNewRect.Height = AParent.ClientRect.Height;
+break;
+}
+}
+AControl.SetRect(LNewRect);
+AControl.UpdateRects(LNewRect);
+}
+function AlignListSort(A, B) {
+switch (A.Align) {
+case alTop: {
+return A.Rect.Top - B.Rect.Top;
+break;
+}
+case alBottom: {
+return B.Rect.Top - A.Rect.Top;
+break;
+}
+case alLeft: {
+return A.Rect.Left - B.Rect.Left;
+break;
+}
+case alRight: {
+return B.Rect.Left - A.Rect.Left;
+break;
+}
+}
+}
+function DoAlign(AParent, AAlign) {
+var i;
+var AlignList = new Array();
+for(i=0; i < AParent.OwnedComps.length; i++) {
+if (AParent.OwnedComps[i].Align == AAlign) {
+AlignList[AlignList.length] = AParent.OwnedComps[i];
+}
+}
+if (AAlign != alNone) {
+AlignList.sort(AlignListSort);
+}
+for (i=0; i < AlignList.length; i++) {
+DoUpdateRects(AParent, AAlign, AlignList[i]);
+}
+}
+function IWCL_UpdateTopLeft(ADiff) {
+this.SetRect(this.Rect);
+}
+function IWCL_UpdateRects(ANewRect) {
+var i;
+var LDiff;
+if (ANewRect.Width < this.OriginalRect.Width) {
+ANewRect.Width = this.OriginalRect.Width;
+}
+if (ANewRect.Height < this.OriginalRect.Height) {
+ANewRect.Height = this.OriginalRect.Height;
+}
+this.ClientRect = new Rect(0, 0, ANewRect.Width, ANewRect.Height);
+this.Rect = CopyRect(ANewRect);
+/* for (i = 0; i < this.OwnedComps.length; i++) {
+this.OwnedComps[i].SetRect(this.OwnedComps[i].Rect);
+} */
+if (this.OwnedComps.length > 0) {
+DoAlign(this, alTop);
+DoAlign(this, alBottom);
+DoAlign(this, alLeft);
+DoAlign(this, alRight);
+DoAlign(this, alClient);
+DoAlign(this, alNone);
+}
+}
