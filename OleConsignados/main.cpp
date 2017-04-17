@@ -245,10 +245,10 @@ void copiar(){
 
 }
 
-void BailOut(char *msg){
-  fprintf(stderr, "Exiting: %s\n", msg);
-  exit(1);
-}
+//char BailOut(char *msg){
+//  fprintf(stderr, "Exiting: %s\n", msg);
+//  exit(1);
+//}
 
 void resgata(){
 
@@ -256,7 +256,7 @@ void resgata(){
 	HANDLE h;
 
 	if (!OpenClipboard(NULL))
-	BailOut("Can't open clipboard");
+	fprintf(stderr, "Exiting: %s\n", "Can't open clipboard"); //BailOut("Can't open clipboard");
 
 	h = GetClipboardData(CF_TEXT);
 	info = (char *)h;
