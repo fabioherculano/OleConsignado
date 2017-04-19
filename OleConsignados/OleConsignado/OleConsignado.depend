@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1492628298 source:c:\robos\oleconsignados\oleconsignado\main.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<winsock2.h>
+	<mysql.h>
+	<cstdlib>
+	<stdlib.h>
+	<string.h>
+
