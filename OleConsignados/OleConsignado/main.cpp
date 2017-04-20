@@ -238,16 +238,24 @@ void copia_informacoes(){
 
 
     //Bairro
-    move(64,y_form+300);
-    dbclick();
+    //move(64,y_form+300);
+    move(38,y_form+300);
+    clickSegura();
+    move(240,y_form+300);
+    clickSolta();
+    //dbclick();
     copiar();
     resgata();
     printf("Bairro --> %s\n",info);
     //Bairro
 
     //Cidade
-    move(300,y_form+300);
-    dbclick();
+    //move(300,y_form+300);
+    move(293,y_form+300);
+    clickSegura();
+    move(480,y_form+300);
+    clickSolta();
+    //dbclick();
     copiar();
     resgata();
     printf("Cidade --> %s\n",info);
