@@ -58,7 +58,7 @@ int main(){
     //y = 300+(22*10);//Posição fixa primeiro registro
     y = 300;//Posição fixa primeiro registro
 
-    for (int z=0; z<15; z++){
+    for (int z=0; z< 25; z++){
 
        if (y > 480){//chegou final da lista
 
@@ -118,6 +118,8 @@ int main(){
 
                     //system("PAUSE");
 
+
+
                     move(x-325,y);//primeiro registro
                     click();
                     Sleep(1000);
@@ -144,16 +146,19 @@ int main(){
 
 void copia_informacoes(){
 
+    //Divergencia de Y em relatorio --> Base no TOPO
+    int divergencia = 25;//caso tenha divergencia no arquivoi pelo topo// senão deixr zero
+
     move(0,0);
 
-    move(36,137);
+    move(36,divergencia+137);
     dbclick();
     copiar();
     resgata();
 
 
      if (strcmp(info,"500 ")==0){
-            printf("Deu merda!....\n");
+            printf("Error!....\n");
             system("PAUSE");
     }else{
 
@@ -163,7 +168,7 @@ void copia_informacoes(){
             }else{
                 Sleep(3000);
                 printf("Provavel carregamento! aguardando....\n");
-                move(36,137);
+                move(36,divergencia+137);
                 dbclick();
                 copiar();
                 resgata();
@@ -174,7 +179,7 @@ void copia_informacoes(){
 
     }
 
-    move(175,200);//Numero da Proposta
+    move(175,divergencia+200);//Numero da Proposta
     dbclick();
     copiar();
     resgata();
@@ -183,9 +188,9 @@ void copia_informacoes(){
 
     //nome
     click();
-    move(74,212);//inicio seleção nome
+    move(74,divergencia+212);//inicio seleção nome
     clickSegura();
-    move(246,212);//final seleção nome
+    move(246,divergencia+212);//final seleção nome
     clickSolta();
     copiar();
     resgata();
@@ -199,7 +204,7 @@ void copia_informacoes(){
     //nome
 
     //Situação
-    move(545,216);//Dituação não sofre mudanã de varificarTipoFormularo
+    move(545,divergencia+216);//Dituação não sofre mudanã de varificarTipoFormularo
     dbclick();
     copiar();
     resgata();
@@ -209,9 +214,9 @@ void copia_informacoes(){
 
 
     //Endereço
-    move(57,y_form+285);
+    move(57,divergencia+y_form+285);
     clickSegura();
-    move(253,y_form+285);
+    move(253,divergencia+y_form+285);
     clickSolta();
     copiar();
     resgata();
@@ -220,7 +225,7 @@ void copia_informacoes(){
     //Endereço
 
     //Numero
-    move(279,y_form+290);
+    move(279,divergencia+y_form+290);
     dbclick();
     copiar();
     resgata();
@@ -229,7 +234,7 @@ void copia_informacoes(){
 
 
     //UF
-    move(532,y_form+290);
+    move(532,divergencia+y_form+290);
     dbclick();
     copiar();
     resgata();
@@ -239,9 +244,9 @@ void copia_informacoes(){
 
     //Bairro
     //move(64,y_form+300);
-    move(38,y_form+300);
+    move(38,divergencia+y_form+300);
     clickSegura();
-    move(240,y_form+300);
+    move(240,divergencia+y_form+300);
     clickSolta();
     //dbclick();
     copiar();
@@ -251,9 +256,9 @@ void copia_informacoes(){
 
     //Cidade
     //move(300,y_form+300);
-    move(293,y_form+300);
+    move(293,divergencia+y_form+300);
     clickSegura();
-    move(480,y_form+300);
+    move(480,divergencia+y_form+300);
     clickSolta();
     //dbclick();
     copiar();
@@ -263,9 +268,9 @@ void copia_informacoes(){
 
     //Cep
     click();
-    move(530,y_form+300);//inicio seleção nome
+    move(530,divergencia+y_form+300);//inicio seleção nome
     clickSegura();
-    move(590,y_form+300);//final seleção nome
+    move(590,divergencia+y_form+300);//final seleção nome
     clickSolta();
     copiar();
     resgata();
@@ -275,9 +280,9 @@ void copia_informacoes(){
 
     //CPF
     click();
-    move(30,y_form+310);//inicio seleção nome
+    move(30,divergencia+y_form+310);//inicio seleção nome
     clickSegura();
-    move(108,y_form+310);//final seleção nome
+    move(108,divergencia+y_form+310);//final seleção nome
     clickSolta();
     copiar();
     resgata();
@@ -287,9 +292,9 @@ void copia_informacoes(){
 
     //RG
     click();
-    move(276,y_form+310);//inicio seleção nome
+    move(276,divergencia+y_form+310);//inicio seleção nome
     clickSegura();
-    move(420,y_form+310);//final seleção nome
+    move(420,divergencia+y_form+310);//final seleção nome
     clickSolta();
     copiar();
     resgata();
@@ -298,7 +303,7 @@ void copia_informacoes(){
 
 
     //Matricula
-    move(586,y_form+310);
+    move(586,divergencia+y_form+310);
     dbclick();
     copiar();
     resgata();
@@ -308,9 +313,9 @@ void copia_informacoes(){
 
     //RG
     click();
-    move(80,y_form+333);//inicio seleção nome
+    move(80,divergencia+y_form+333);//inicio seleção nome
     clickSegura();
-    move(155,y_form+333);//final seleção nome
+    move(155,divergencia+y_form+333);//final seleção nome
     clickSolta();
     copiar();
     resgata();
@@ -349,6 +354,10 @@ void finale(){
         move(432,1005);
 	}
 	click();
+
+    move(435,1000);//caso não tenha lista
+    click();
+
     Sleep(3000);
  //system("PAUSE");
 
