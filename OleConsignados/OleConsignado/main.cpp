@@ -32,6 +32,7 @@ void resgata();
 void copia_informacoes();
 int verificarTipoFormulario();
 void finale();
+void add_banco(string numero, string nome, string situacao, string endereco, string num, string uf, string bairro, string cidade, string cep, string cpf, string rg, string matricula, string civil, string produto, string orgao, string agente, string data, string bruto, string liberado, string parcela, string qnt);
 
 char *info = 0;
 
@@ -119,7 +120,6 @@ int main(){
                     //system("PAUSE");
 
 
-
                     move(x-325,y);//primeiro registro
                     click();
                     Sleep(1000);
@@ -132,12 +132,7 @@ int main(){
                   info = 0;
            }
 
-
-
-
     }
-
-
 
     system("PAUSE");
     return(0);
@@ -183,8 +178,8 @@ void copia_informacoes(){
     dbclick();
     copiar();
     resgata();
-    printf("Numero da Proposta --> %s\n",info);
-
+    //printf("Numero da Proposta --> %s\n",info);
+    string numero = info;
 
     //nome
     click();
@@ -194,13 +189,14 @@ void copia_informacoes(){
     clickSolta();
     copiar();
     resgata();
-    printf("Nome Cliente --> %s\n",info);
+    //printf("Nome Cliente --> %s\n",info);
+    string nome = info;
 
 
     /*Verificação para nome de cliente de conter (numero) apos o nomde do cliente o formulario sera mais alto*/
     //essa função verifica se o formulario houve alguma alteração devido ao tamanho do nome do cliente FULANO DE TAL (123123123) os parenteses com o numero pode estar na linha abaixo desconfigurando toda a pesquisa
     y_form = verificarTipoFormulario();//a veriavel info é global sera usada dentro desta função
-    printf("y --> %i\n",y_form);
+    //printf("y --> %i\n",y_form);
     //nome
 
     //Situação
@@ -209,7 +205,9 @@ void copia_informacoes(){
     copiar();
     resgata();
     strcpy(status, info);//Status para final
-    printf("Situação --> %s\n",info);
+    //printf("Situação --> %s\n",info);
+    string situacao = info;
+
     //Situação
 
 
@@ -220,7 +218,9 @@ void copia_informacoes(){
     clickSolta();
     copiar();
     resgata();
-    printf("Endereço --> %s\n",info);
+    string endereco = info;
+
+    //printf("Endereço --> %s\n",info);
 
     //Endereço
 
@@ -229,7 +229,9 @@ void copia_informacoes(){
     dbclick();
     copiar();
     resgata();
-    printf("Numero --> %s\n",info);
+    string num = info;
+
+    //printf("Numero --> %s\n",info);
     //Numero
 
 
@@ -238,7 +240,9 @@ void copia_informacoes(){
     dbclick();
     copiar();
     resgata();
-    printf("UF --> %s\n",info);
+    string uf = info;
+
+    //printf("UF --> %s\n",info);
     //UF
 
 
@@ -251,7 +255,9 @@ void copia_informacoes(){
     //dbclick();
     copiar();
     resgata();
-    printf("Bairro --> %s\n",info);
+    string bairro = info;
+
+    //printf("Bairro --> %s\n",info);
     //Bairro
 
     //Cidade
@@ -263,7 +269,9 @@ void copia_informacoes(){
     //dbclick();
     copiar();
     resgata();
-    printf("Cidade --> %s\n",info);
+    string cidade = info;
+
+    //printf("Cidade --> %s\n",info);
     //Cidade
 
     //Cep
@@ -274,7 +282,9 @@ void copia_informacoes(){
     clickSolta();
     copiar();
     resgata();
-    printf("CEP --> %s\n",info);
+    string cep = info;
+
+    //printf("CEP --> %s\n",info);
     //Cep
 
 
@@ -286,7 +296,9 @@ void copia_informacoes(){
     clickSolta();
     copiar();
     resgata();
-    printf("CPF --> %s\n",info);
+    string cpf = info;
+
+    //printf("CPF --> %s\n",info);
     //CPF
 
 
@@ -298,7 +310,9 @@ void copia_informacoes(){
     clickSolta();
     copiar();
     resgata();
-    printf("RG --> %s\n",info);
+    string rg = info;
+
+    //printf("RG --> %s\n",info);
     //RG
 
 
@@ -307,25 +321,187 @@ void copia_informacoes(){
     dbclick();
     copiar();
     resgata();
-    printf("Matricula --> %s\n",info);
+    string matricula = info;
+
+    //printf("Matricula --> %s\n",info);
     //Matricula
 
 
-    //RG
+    //estado civil
     click();
-    move(80,divergencia+y_form+333);//inicio seleção nome
+    move(80,divergencia+y_form+333);//inicio seleção estado civil
     clickSegura();
-    move(155,divergencia+y_form+333);//final seleção nome
+    move(155,divergencia+y_form+333);//final seleção estado civil
     clickSolta();
     copiar();
     resgata();
-    printf("Nascimento --> %s\n",info);
+    string civil = info;
+
+    //printf("estado civil --> %s\n",info);
     //RG
+
+
+    //Produto
+    move(50,divergencia+y_form+475);//inicio seleção produto
+    clickSegura();
+    move(245,divergencia+y_form+475);//final seleção produto
+    clickSolta();
+    copiar();
+    resgata();
+    string produto = info;
+
+    //printf("Produto --> %s\n",info);
+    //Produto
+
+
+    //Produto
+    move(317,divergencia+y_form+505);//inicio seleção Orgao
+    dbclick();
+    //clickSegura();
+    //move(500,divergencia+y_form+505);//final seleção Orgao
+    //clickSolta();
+    copiar();
+    resgata();
+    string orgao = info;
+
+    printf("ORGAO --> %s\n",orgao.c_str());
+    //Produto
+
+
+    //Agente
+    move(560,divergencia+y_form+490);//inicio seleção agente
+    clickSegura();
+    move(730,divergencia+y_form+490);//final seleção agente
+    clickSolta();
+    copiar();
+    resgata();
+    string agente = info;
+
+    //printf("Agente --> %s\n",info);
+    //Agente
+
+
+    //Data
+    move(63,divergencia+y_form+565);//inicio seleção data
+    clickSegura();
+    move(150,divergencia+y_form+565);//final seleção data
+    clickSolta();
+    copiar();
+    resgata();
+    string data = info;
+
+    //printf("Data Base --> %s\n",info);
+    //Data
+
+
+    //Valor Bruto
+    move(300,divergencia+y_form+575);//inicio seleção valor bruto
+    clickSegura();
+    move(460,divergencia+y_form+575);//final seleção valor bruto
+    clickSolta();
+    copiar();
+    resgata();
+    string bruto = info;
+
+    //printf("Valor Bruto --> %s\n",info);
+    //Valor Bruto
+
+
+    //Valor liberado
+    move(73,divergencia+y_form+575);//inicio seleção valor liberado
+    clickSegura();
+    move(200,divergencia+y_form+575);//final seleção valor liberado
+    clickSolta();
+    copiar();
+    resgata();
+    string liberado = info;
+
+    //printf("Valor Liberado --> %s\n",info);
+    //Valor liberado
+
+
+    //Valor Parcela
+    move(310,divergencia+y_form+585);//inicio seleção parcela
+    clickSegura();
+    move(410,divergencia+y_form+585);//final seleção parcela
+    clickSolta();
+    copiar();
+    resgata();
+    string parcela = info;
+
+    //printf("Valor Parcela --> %s\n",info);
+    //Valor Parcela
+
+
+    //Qnt Parcela
+    move(315,divergencia+y_form+595);//inicio seleção quantidade de parcela
+    clickSegura();
+    move(410,divergencia+y_form+595);//final seleção quantidade de parcela
+    clickSolta();
+    copiar();
+    resgata();
+    string qnt = info;
+
+    //printf("Qnt Parcela --> %s\n",info);
+    //Qnt Parcela
+
+
+    add_banco(numero, nome, situacao, endereco, num, uf, bairro, cidade, cep, cpf, rg, matricula, civil, produto, orgao, agente, data, bruto, liberado, parcela, qnt);
+
 
     finale();
 
 }
 
+
+void add_banco(string numero, string nome, string situacao, string endereco, string num, string uf, string bairro, string cidade, string cep, string cpf, string rg, string matricula, string civil, string produto, string orgao, string agente, string data, string bruto, string liberado, string parcela, string qnt){
+
+    MYSQL conexao;
+
+    mysql_init(&conexao);
+    if ( mysql_real_connect(&conexao, "localhost", "root", "", "grupolhasa_sistema", 0, NULL, 0) ){
+       cout << "\nConexao ao banco realizada com sucesso!\n" << endl;
+    }
+    else{
+        cout << "Falha de conexao\n" << endl;
+        cout << mysql_errno(&conexao) << endl;
+        cout << mysql_error(&conexao) << endl;
+    }
+
+    int ret;
+    string sql = "INSERT INTO cad_proposta ( nome_cliente, cad_orgao_id, cad_financeira_id, aux_tipo_coeficiente_id, aux_status_conferencia_id, numero_proposta, sis_usuario_id, cad_controle_carga_id, aux_situacao_banco_id, cad_representante_id, aux_status_comissao_id, valor_liberado, valor_recompra, valor_parcela, plano, valor_financiado, dt_envio) VALUES ('";
+    //strcat(sql, nome);
+    sql = sql + nome + "',";
+    sql = sql + orgao.c_str() +", 17, 1, 4, ";
+    sql = sql + numero.c_str() +",1,666,";
+    //154
+
+    if (strcmp (situacao.c_str(), "APROVADA") == 0){
+        situacao = "203";
+    }
+
+    if (strcmp (situacao.c_str(), "LIBERADA") == 0){
+        situacao = "203";
+    }
+
+    if (strcmp (situacao.c_str(), "REPROVADA") == 0){
+        situacao = "239";
+    }
+
+    sql = sql + situacao.c_str() +",2,1,10,10,5,1,10,'2014-11-18')";
+
+    //strcat(sql, resto);
+    ret = mysql_query(&conexao,sql.c_str());
+
+    if ( mysql_errno( &conexao ) || mysql_warning_count( &conexao ) ){
+       cout << "Erro" << endl;
+    }else{
+       cout << "OK" << endl;
+    }
+
+    system("PAUSE");
+
+}
 
 void finale(){
 
