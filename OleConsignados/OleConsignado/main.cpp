@@ -341,6 +341,9 @@ void copia_informacoes(){
     //RG
 
 
+
+
+
     //Produto
     move(50,divergencia+y_form+475);//inicio seleção produto
     clickSegura();
@@ -366,6 +369,26 @@ void copia_informacoes(){
 
     printf("ORGAO --> %s\n",orgao.c_str());
     //Produto
+
+
+    //condição de verificação de divergencia de orgão
+
+
+    move(272,divergencia+y_form+511);
+    dbclick();
+    copiar();
+    resgata();
+    string verifica = info;
+    if (strcmp(verifica.c_str(),"ORGAO")==0){
+        cout << "Normal";
+    }else{
+        cout << "Baixo";
+        y_form = y_form + 15;
+    }
+
+    //system("PAUSE");
+    //condição de verificação de divergencia de orgão
+
 
 
     //Agente
