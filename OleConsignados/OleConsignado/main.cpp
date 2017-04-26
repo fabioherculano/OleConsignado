@@ -200,7 +200,7 @@ void copia_informacoes(){
     //nome
 
     //Situação
-    move(545,divergencia+216);//Dituação não sofre mudanã de varificarTipoFormularo
+    move(545,divergencia+210);//Dituação não sofre mudanã de varificarTipoFormularo
     dbclick();
     copiar();
     resgata();
@@ -357,7 +357,20 @@ void copia_informacoes(){
     //Produto
 
 
-    //Produto
+    //condição de verificação de divergencia de orgão
+    move(272,divergencia+y_form+511);
+    dbclick();
+    copiar();
+    resgata();
+    string verifica = info;
+    if (strcmp(verifica.c_str(),"ORGAO")!=0){
+       y_form = y_form + 15;
+    }
+    //condição de verificação de divergencia de orgão
+
+
+
+    //Orgao
     move(317,divergencia+y_form+505);//inicio seleção Orgao
     dbclick();
     //clickSegura();
@@ -368,26 +381,7 @@ void copia_informacoes(){
     string orgao = info;
 
     printf("ORGAO --> %s\n",orgao.c_str());
-    //Produto
-
-
-    //condição de verificação de divergencia de orgão
-
-
-    move(272,divergencia+y_form+511);
-    dbclick();
-    copiar();
-    resgata();
-    string verifica = info;
-    if (strcmp(verifica.c_str(),"ORGAO")==0){
-        cout << "Normal";
-    }else{
-        cout << "Baixo";
-        y_form = y_form + 15;
-    }
-
-    //system("PAUSE");
-    //condição de verificação de divergencia de orgão
+    //Orgao
 
 
 
@@ -501,6 +495,7 @@ void add_banco(string numero, string nome, string situacao, string endereco, str
 
     if (strcmp (situacao.c_str(), "APROVADA") == 0){
         situacao = "203";
+
     }
 
     if (strcmp (situacao.c_str(), "LIBERADA") == 0){
@@ -510,6 +505,12 @@ void add_banco(string numero, string nome, string situacao, string endereco, str
     if (strcmp (situacao.c_str(), "REPROVADA") == 0){
         situacao = "239";
     }
+
+    if (strcmp (situacao.c_str(), "ANDAMENTO") == 0){
+        situacao = "212";
+    }
+
+        cout << situacao << endl;
 
     sql = sql + situacao.c_str() +",2,1,10,10,5,1,10,'2014-11-18')";
 
@@ -522,7 +523,7 @@ void add_banco(string numero, string nome, string situacao, string endereco, str
        cout << "OK" << endl;
     }
 
-    system("PAUSE");
+    //system("PAUSE");
 
 }
 
